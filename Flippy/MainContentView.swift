@@ -12,14 +12,6 @@ struct MainContentView: View {
             Color.white // Full-screen white background
 
             VStack {
-                Text("Flippy")
-                    .font(.system(size: 40, design: .monospaced))
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .kerning(2.2)
-                    .padding(.top, 8) // Adjust top padding as needed
-                    .padding(.bottom, 20) // Adjust bottom padding as needed
-                
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(spacing: 10) { // Adjust spacing between images
                         ForEach(selectedImages) { rotatableImage in
@@ -35,7 +27,6 @@ struct MainContentView: View {
                 }
                 .background(Color.white)
                 .cornerRadius(10)
-//                .shadow(radius: 5)
                 .padding(.bottom, 20) // Add spacing below ScrollView
 
                 if selectedImages.isEmpty {
@@ -43,7 +34,7 @@ struct MainContentView: View {
                         isImagePickerPresented = true
                     }
                     .padding()
-                    .font(.system(size: 15, design: .monospaced))
+                    .font(.system(size: 25, design: .monospaced))
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)

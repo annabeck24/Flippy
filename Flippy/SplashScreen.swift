@@ -3,6 +3,9 @@ import PhotosUI
 
 
 struct SplashScreen: View {
+    @State private var opacity: Double = 1.0
+    @State private var scale: CGFloat = 1.0
+
     var body: some View {
         ZStack {
             Color.green
@@ -13,6 +16,14 @@ struct SplashScreen: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .kerning(2.2)
+                .scaleEffect(scale)
+        }
+        .opacity(opacity)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 4)) {
+                opacity = 0.0
+                scale = 2.0
+            }
         }
     }
 }
