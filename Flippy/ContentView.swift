@@ -1,3 +1,4 @@
+
 import SwiftUI
 import PhotosUI
 
@@ -9,6 +10,8 @@ struct RotatableImage: Identifiable, Hashable {
 
 struct ContentView: View {
     @State private var isImagePickerPresented = false
+    @State private var isImagesSaved = false
+    @State private var isFirstSelection = true
     @State private var selectedImages: [RotatableImage] = []
 
     var body: some View {
@@ -34,16 +37,18 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .shadow(radius: 5)
                 .padding(.bottom, 20) // Add spacing below ScrollView
-
-                Button("Select Photos") {
-                    isImagePickerPresented = true
+                if isFirstSelection {
+                    Button("Select Photos") {
+                        isImagePickerPresented = true
+                        isFirstSelection = false
+                    }
+                    .padding()
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
                 }
-                .padding()
-                .background(Color.black)
-                .foregroundColor(.white)
-                .cornerRadius(10)
 
-                if !selectedImages.isEmpty {
+                if !selectedImages.isEmpty && !isImagesSaved {
                     Button("Flip Photos") {
                         flipAllPhotos()
                     }
@@ -54,11 +59,32 @@ struct ContentView: View {
 
                     Button("Save Photos") {
                         saveAllPhotos()
+                        isImagesSaved = true
                     }
                     .padding()
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
+                }
+
+                if !selectedImages.isEmpty && isImagesSaved {
+                    Button("Select More Photos") {
+                        isImagesSaved = false
+                        selectedImages.removeAll()
+                        isImagePickerPresented = true
+                    }
+                    .padding()
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                }
+
+                if isImagesSaved {
+                    Text("Flipped images have been saved!")
+                        .padding()
+                        .foregroundColor(.green)
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
                 }
             }
             .padding()
@@ -169,3 +195,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 #endif
+
+
+
