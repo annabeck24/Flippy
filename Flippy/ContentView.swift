@@ -18,6 +18,14 @@ struct ContentView: View {
             Color.white // Full-screen white background
 
             VStack {
+                Text("Flippy")
+                    .font(.system(size: 40, design: .monospaced))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .kerning(2.2)
+                    .padding(.top, 8) // Adjust top padding as needed
+                    .padding(.bottom, 20) // Adjust bottom padding as needed
+                
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(spacing: 10) { // Adjust spacing between images
                         ForEach(selectedImages) { rotatableImage in
@@ -31,10 +39,9 @@ struct ContentView: View {
                     }
                     .padding(.horizontal, 20) // Add horizontal padding
                 }
-                .frame(height: 200) // Adjust height of the ScrollView
                 .background(Color.white)
                 .cornerRadius(10)
-                .shadow(radius: 5)
+//                .shadow(radius: 5)
                 .padding(.bottom, 20) // Add spacing below ScrollView
 
                 if selectedImages.isEmpty {
@@ -42,6 +49,7 @@ struct ContentView: View {
                         isImagePickerPresented = true
                     }
                     .padding()
+                    .font(.system(size: 15, design: .monospaced))
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -52,6 +60,7 @@ struct ContentView: View {
                         flipAllPhotos()
                     }
                     .padding()
+                    .font(.system(size: 15, design: .monospaced))
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -61,6 +70,7 @@ struct ContentView: View {
                         isImagesSaved = true
                     }
                     .padding()
+                    .font(.system(size: 15, design: .monospaced))
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -71,6 +81,7 @@ struct ContentView: View {
                         reset()
                     }
                     .padding()
+                    .font(.system(size: 15, design: .monospaced))
                     .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
