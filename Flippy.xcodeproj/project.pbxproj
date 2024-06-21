@@ -275,6 +275,8 @@
 				DEVELOPMENT_TEAM = K562G694W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save the flipped photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select and flip photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +306,8 @@
 				DEVELOPMENT_TEAM = K562G694W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save the flipped photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select and flip photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
