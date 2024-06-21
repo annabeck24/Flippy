@@ -1,4 +1,3 @@
-
 import SwiftUI
 import PhotosUI
 
@@ -37,10 +36,10 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .shadow(radius: 5)
                 .padding(.bottom, 20) // Add spacing below ScrollView
-                if isFirstSelection {
+
+                if selectedImages.isEmpty {
                     Button("Select Photos") {
                         isImagePickerPresented = true
-                        isFirstSelection = false
                     }
                     .padding()
                     .background(Color.black)
@@ -67,24 +66,14 @@ struct ContentView: View {
                     .cornerRadius(10)
                 }
 
-                if !selectedImages.isEmpty && isImagesSaved {
-                    Button("Select More Photos") {
-                        isImagesSaved = false
-                        selectedImages.removeAll()
-                        isImagePickerPresented = true
+                if isImagesSaved {
+                    Button("Images Saved! Flip More Images") {
+                        reset()
                     }
                     .padding()
-                    .background(Color.black)
+                    .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                }
-
-                if isImagesSaved {
-                    Text("Flipped images have been saved!")
-                        .padding()
-                        .foregroundColor(.green)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
                 }
             }
             .padding()
@@ -134,6 +123,12 @@ struct ContentView: View {
 
     func saveImageToCameraRoll(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+
+    func reset() {
+        isFirstSelection = true
+        isImagesSaved = false
+        selectedImages.removeAll()
     }
 }
 
@@ -195,6 +190,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 #endif
-
-
-
