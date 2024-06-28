@@ -14,7 +14,7 @@
 		950AA2782C26358E00C971C5 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950AA2772C26358E00C971C5 /* MainContentView.swift */; };
 		950AA27A2C26361500C971C5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950AA2792C26361500C971C5 /* SplashScreen.swift */; };
 		950AA27C2C26364B00C971C5 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950AA27B2C26364B00C971C5 /* PhotoPicker.swift */; };
-		9561608E2C2E3D600099A8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9561608D2C2E3D600099A8E5 /* LaunchScreen.storyboard */; };
+		9575FCFB2C2E5C3B00AB36E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9575FCFA2C2E5C3B00AB36E0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		950AA2772C26358E00C971C5 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		950AA2792C26361500C971C5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		950AA27B2C26364B00C971C5 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
-		9561608D2C2E3D600099A8E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9575FCFA2C2E5C3B00AB36E0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 		950AA25B2C2516C600C971C5 = {
 			isa = PBXGroup;
 			children = (
-				9561608D2C2E3D600099A8E5 /* LaunchScreen.storyboard */,
+				9575FCFA2C2E5C3B00AB36E0 /* LaunchScreen.storyboard */,
 				950AA2662C2516C700C971C5 /* Flippy */,
 				950AA2652C2516C700C971C5 /* Products */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9561608E2C2E3D600099A8E5 /* LaunchScreen.storyboard in Resources */,
+				9575FCFB2C2E5C3B00AB36E0 /* LaunchScreen.storyboard in Resources */,
 				950AA26F2C2516C800C971C5 /* Preview Assets.xcassets in Resources */,
 				950AA26C2C2516C800C971C5 /* Assets.xcassets in Resources */,
 			);
