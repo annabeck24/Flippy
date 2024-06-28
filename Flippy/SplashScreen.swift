@@ -11,7 +11,7 @@ struct SplashScreen: View {
             Color.green
                 .edgesIgnoringSafeArea(.all)
 
-            Text("Flippy")
+            Text("PhotoFlippy")
                 .font(.system(size: 35, design: .monospaced))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -22,7 +22,7 @@ struct SplashScreen: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 4)) {
                 opacity = 0.0
-                scale = 2.0
+                scale = 1.5
             }
         }
     }
